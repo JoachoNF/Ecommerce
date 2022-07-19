@@ -30,4 +30,7 @@ public class Factura {
     private Double valor_total;
     @Column(name = "Metodo_Pago")
     private String metodo_pago;
+
+    public Factura() {
+    }
 }

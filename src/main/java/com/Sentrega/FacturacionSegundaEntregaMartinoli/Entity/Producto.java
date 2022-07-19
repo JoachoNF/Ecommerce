@@ -23,4 +23,7 @@ public class Producto {
     private Double valor_prod;
     @Column( name = "Stock")
     private Long stock;
+
+    public Producto() {
+    }
 }
