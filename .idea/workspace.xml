@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Commit mejor">
+    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/joaco/Desktop/Proyecto LMJ/ClienteApiRestMartinoli&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joaco/Desktop/Proyecto LMJ/FacturacionSegundaEntregaMartinoli-main/pom.xml&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -116,8 +117,50 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="cl" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="17" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.FacturacionSegundaEntregaMartinoliApplication" />
+      <item itemvalue="Maven.cl" />
       <item itemvalue="Maven.FacturacionSegundaEntregaMartinoli [clean...]" />
     </list>
     <recent_temporary>
@@ -135,15 +178,18 @@
       <option name="presentableId" value="Default" />
       <updated>1657806380266</updated>
     </task>
-    <task id="LOCAL-00001" summary="Commit mejor">
-      <created>1658198852644</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1658198852644</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -155,9 +201,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit mejor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit mejor" />
   </component>
 </project>
