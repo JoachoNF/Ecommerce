@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Commit mejor">
+    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="actualizacion funcional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658198852644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="actualizacion funcional">
+      <created>1658266911313</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658266911313</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +166,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit mejor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit mejor" />
+    <MESSAGE value="actualizacion funcional" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion funcional" />
   </component>
 </project>

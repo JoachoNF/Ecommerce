@@ -4,6 +4,11 @@ import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Cliente;
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import java.util.List;
 
 @Service
@@ -34,6 +39,27 @@ public class ClienteService implements ClienteServiceInterface {
 
     @Override
     public Cliente putCliente(Cliente cliente) {
-        return null;
+
+            EntityManagerFactory mn = Persistence.createEntityManagerFactory("myPU");
+            EntityManager manager = mn.createEntityManager();
+            EntityTransaction transaction = null;
+            try {
+                transaction = manager.getTransaction();
+                transaction.begin();
+
+
+
+                manager.merge(cliente);
+                transaction.commit();
+            } catch (Exception ex) {
+                if (transaction != null) {
+                    transaction.rollback();
+                }
+                ex.printStackTrace();
+            } finally {
+                manager.close();
+            }
+            return manager.merge(cliente);
+        };
     }
-}
+
