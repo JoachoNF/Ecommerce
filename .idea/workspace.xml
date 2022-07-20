@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Detalles menores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/ClienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/ProductoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/ProductoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Bw9ez710yZojES6LYlZWY2Ljl9" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,7 +66,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joaco/Desktop/Proyecto LMJ/FacturacionSegundaEntregaMartinoli-main/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joaco/Desktop/MC-MT&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -181,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658275077644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Detalles menores">
+      <created>1658276059924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658276059924</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
