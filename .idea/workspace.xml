@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="">
+    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Detalles menores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +174,14 @@
       <option name="presentableId" value="Default" />
       <updated>1657806380266</updated>
     </task>
+    <task id="LOCAL-00001" summary="Detalles menores">
+      <created>1658275077644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658275077644</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -201,5 +205,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Detalles menores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Detalles menores" />
   </component>
 </project>
