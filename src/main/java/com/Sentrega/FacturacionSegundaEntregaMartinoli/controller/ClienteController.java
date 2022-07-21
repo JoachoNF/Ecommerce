@@ -35,6 +35,10 @@ public class ClienteController {
     private ResponseEntity<?> postCliente(@RequestBody Cliente cliente){
         return ResponseEntity.ok(clienteService.postCliente(cliente));
     }
+    @PutMapping("/Change")
+    private ResponseEntity<?> putCliente(@RequestBody Cliente cliente){
+        return ResponseEntity.ok(clienteService.putCliente(cliente));
+    }
 
 
 

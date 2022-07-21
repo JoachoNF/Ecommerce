@@ -56,7 +56,7 @@ public class ClienteService implements ClienteServiceInterface {
             } finally {
                 manager.close();
             }
-            return null;
+            return cliente;
         };
 
 }
