@@ -19,26 +19,18 @@ public class ClienteController {
     private ClienteServiceInterface clienteService;
 
 
-    //Clientes
     @GetMapping("")
     private ResponseEntity<?> getAllClientes() {
         return ResponseEntity.ok(clienteService.getClientes());
     }
-
-    ;
-
     @GetMapping("/id{id}")
     private ResponseEntity<?> getClienteById(@PathVariable Integer id) {
         return ResponseEntity.ok(clienteService.getClienteById(id));
     }
-
-    ;
-
     @GetMapping("/sex{s}")
     private ResponseEntity<?> getClienteBySex(@PathVariable Character s) {
         return ResponseEntity.ok(clienteService.getClientesBySex(s));
     }
-
     @PostMapping(value = "/New")
     private ResponseEntity<?> postCliente(@RequestBody Cliente cliente){
         return ResponseEntity.ok(clienteService.postCliente(cliente));
