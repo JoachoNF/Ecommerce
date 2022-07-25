@@ -39,24 +39,40 @@ public class ClienteService implements ClienteServiceInterface {
 
     @Override
     public Cliente putCliente(Cliente cliente) {
+        EntityManagerFactory EM_Factory = Persistence.createEntityManagerFactory("MyPU");
+        EntityManager manager = EM_Factory.createEntityManager();
+        EntityTransaction transaction = null;
+        Cliente clienteAModify = repository.findById(cliente.getId_cliente()).orElse(null);
+        try {
+            transaction = manager.getTransaction();
+            transaction.begin();
 
-            EntityManagerFactory mn = Persistence.createEntityManagerFactory("myPU");
-            EntityManager manager = mn.createEntityManager();
-            EntityTransaction transaction = null;
-            try {
-                transaction = manager.getTransaction();
-                transaction.begin();
-                manager.merge(cliente);
-                transaction.commit();
-            } catch (Exception ex) {
-                if (transaction != null) {
-                    transaction.rollback();
-                }
-                ex.printStackTrace();
-            } finally {
-                manager.close();
+            if (clienteAModify==null){
+                repository.save(cliente);
+                clienteAModify = cliente;
+            }else{
+                clienteAModify = cliente;
+                repository.deleteById(clienteAModify.getId_cliente());
+                repository.save(clienteAModify);
             }
-            return cliente;
-        };
+            transaction.commit();
+
+        }catch(Exception e){
+            if(transaction != null){
+                System.out.println(e.getMessage());
+                transaction.rollback();
+            }
+        }finally{
+            manager.close();
+        }
+        manager.persist(clienteAModify);
+        return clienteAModify;
+        }
+    @Override
+    public Cliente deleteCliente(Integer id) {
+        Cliente retorno = repository.findById(id).orElse(null);
+        repository.deleteById(id);
+        return retorno;
+    }
 
 }

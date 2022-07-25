@@ -39,7 +39,10 @@ public class ClienteController {
     private ResponseEntity<?> putCliente(@RequestBody Cliente cliente){
         return ResponseEntity.ok(clienteService.putCliente(cliente));
     }
-
+    @DeleteMapping("/Delete")
+    private ResponseEntity<?> deleteCliente(@RequestBody Integer id){
+        return ResponseEntity.ok("Cliente " + clienteService.deleteCliente(id) + " Eliminado");
+    }
 
 
 }
