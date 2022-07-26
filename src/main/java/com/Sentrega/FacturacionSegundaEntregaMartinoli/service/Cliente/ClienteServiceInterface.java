@@ -11,4 +11,5 @@ public interface ClienteServiceInterface {
     List<Cliente> getClientesBySex(Character s);
     Cliente postCliente(Cliente cliente);
     Cliente putCliente(Cliente cliente);
+    Cliente deleteCliente(Integer id);
 }
