@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Commit mejor">
+    <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Unificacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/Entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/repository/FacturaRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Bw9ez710yZojES6LYlZWY2Ljl9" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -150,7 +150,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -158,6 +170,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit mejor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit mejor" />
+    <MESSAGE value="Unificacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unificacion" />
   </component>
 </project>
