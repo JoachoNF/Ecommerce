@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="73a7e666-8619-40d0-bd62-c712ba934d60" name="Changes" comment="Prueba del PutCliente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/controller/ClienteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Sentrega/FacturacionSegundaEntregaMartinoli/service/Cliente/ClienteServiceInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -217,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658364917870</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Prueba del PutCliente">
+      <created>1658770128034</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658770128034</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -236,7 +239,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
