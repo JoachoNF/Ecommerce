@@ -12,4 +12,5 @@ public interface ClienteServiceInterface {
     Cliente postCliente(Cliente cliente);
     Cliente putCliente(Cliente cliente);
     Cliente deleteCliente(Integer id);
+    String updateNombre(Cliente update);
 }

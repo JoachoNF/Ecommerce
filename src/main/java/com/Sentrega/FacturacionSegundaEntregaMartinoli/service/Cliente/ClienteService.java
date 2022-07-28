@@ -5,10 +5,7 @@ import com.Sentrega.FacturacionSegundaEntregaMartinoli.repository.ClienteReposit
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.List;
 
 @Service
@@ -36,36 +33,28 @@ public class ClienteService implements ClienteServiceInterface {
     public Cliente postCliente(Cliente cliente) {
         return repository.save(cliente);
     }
-
     @Override
     public Cliente putCliente(Cliente cliente) {
+        Cliente clienteAModify = repository.findById(cliente.getId_cliente()).orElse(null);
         EntityManagerFactory EM_Factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager manager = EM_Factory.createEntityManager();
-        EntityTransaction transaction = null;
-        Cliente clienteAModify = repository.findById(cliente.getId_cliente()).orElse(null);
+        EntityTransaction t = null;
         try {
-            transaction = manager.getTransaction();
-            transaction.begin();
+            t = manager.getTransaction();
+            t.begin();
 
-            if (clienteAModify==null){
-                repository.save(cliente);
-                clienteAModify = cliente;
-            }else{
-                clienteAModify = cliente;
-                repository.deleteById(clienteAModify.getId_cliente());
-                repository.save(clienteAModify);
-            }
-            transaction.commit();
+            manager.merge(clienteAModify);
+            manager.refresh(clienteAModify);
 
+            t.commit();
         }catch(Exception e){
-            if(transaction != null){
+            if(t != null){
+                t.rollback();
                 System.out.println(e.getMessage());
-                transaction.rollback();
             }
         }finally{
             manager.close();
         }
-        manager.persist(clienteAModify);
         return clienteAModify;
         }
     @Override
@@ -74,5 +63,10 @@ public class ClienteService implements ClienteServiceInterface {
         repository.deleteById(id);
         return retorno;
     }
-
+    @Override
+    public String updateNombre(Cliente update){
+        Cliente old = repository.findById(update.getId_cliente()).orElse(null);
+        repository.updateNombre(old.getId_cliente(),update.getNombre());
+        return update.getNombre();
+    };
 }
