@@ -11,7 +11,4 @@ import java.util.List;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
     List<Cliente> findBySex(char s);
-    @Modifying
-    @Query("Update Cliente c SET c.nombre=:nombre WHERE c.id_cliente=:id_cliente")
-    public Void updateNombre(@Param("id_cliente") Integer id, @Param("nombre") String nombre);
 }

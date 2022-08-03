@@ -1,6 +1,7 @@
 package com.Sentrega.FacturacionSegundaEntregaMartinoli.controller;
 
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Cliente;
+import com.Sentrega.FacturacionSegundaEntregaMartinoli.Error.ApiException;
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.service.Cliente.ClienteServiceInterface;
 import lombok.Data;
 import net.bytebuddy.pool.TypePool;
@@ -14,11 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/Clientes")
 public class ClienteController {
-
     @Autowired
     private ClienteServiceInterface clienteService;
-
-
     @GetMapping("")
     private ResponseEntity<?> getAllClientes() {
         return ResponseEntity.ok(clienteService.getClientes());
@@ -32,18 +30,21 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.getClientesBySex(s));
     }
     @PostMapping(value = "/New")
-    private ResponseEntity<?> postCliente(@RequestBody Cliente cliente){
+    private ResponseEntity<?> postCliente(@RequestBody Cliente cliente) throws ApiException {
         return ResponseEntity.ok(clienteService.postCliente(cliente));
     }
     @PutMapping("/Change")
-    private ResponseEntity<?> putCliente(@RequestBody Cliente cliente){
+    private ResponseEntity<?> putCliente(@RequestBody Cliente cliente) throws ApiException {
         return ResponseEntity.ok(clienteService.putCliente(cliente));
     }
-
     @DeleteMapping("/Delete")
-    private ResponseEntity<?> deleteCliente(@RequestBody Integer id){
-        return ResponseEntity.ok("Cliente " + clienteService.deleteCliente(id) + " Eliminado");
+    private ResponseEntity<?> deleteCliente(@RequestBody Integer id) throws ApiException {
+        if(id==0){
+            ResponseEntity<?> response = ResponseEntity.ok(clienteService.getClientes());
+            clienteService.deleteAll();
+            return response;
+        }else{
+            return ResponseEntity.ok("Cliente " + clienteService.deleteCliente(id) + " Eliminado");
+        }
     }
-
-
 }

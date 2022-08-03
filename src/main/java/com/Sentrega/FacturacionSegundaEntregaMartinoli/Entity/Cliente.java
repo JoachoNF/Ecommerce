@@ -14,7 +14,6 @@ import java.util.Objects;
 public class Cliente {
 
     @Id
-    @NotNull
     @Column( name = "Id_Cliente")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_cliente;

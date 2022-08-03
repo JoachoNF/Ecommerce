@@ -1,11 +1,11 @@
 package com.Sentrega.FacturacionSegundaEntregaMartinoli.service.Cliente;
 
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Cliente;
+import com.Sentrega.FacturacionSegundaEntregaMartinoli.Error.ApiException;
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.*;
 import java.util.List;
 
 @Service
@@ -30,43 +30,54 @@ public class ClienteService implements ClienteServiceInterface {
     }
 
     @Override
-    public Cliente postCliente(Cliente cliente) {
-        return repository.save(cliente);
-    }
-    @Override
-    public Cliente putCliente(Cliente cliente) {
-        Cliente clienteAModify = repository.findById(cliente.getId_cliente()).orElse(null);
-        EntityManagerFactory EM_Factory = Persistence.createEntityManagerFactory("MyPU");
-        EntityManager manager = EM_Factory.createEntityManager();
-        EntityTransaction t = null;
+    public Cliente postCliente(Cliente cliente) throws ApiException {
         try {
-            t = manager.getTransaction();
-            t.begin();
-
-            manager.merge(clienteAModify);
-            manager.refresh(clienteAModify);
-
-            t.commit();
-        }catch(Exception e){
-            if(t != null){
-                t.rollback();
-                System.out.println(e.getMessage());
+            if(cliente.getId_cliente()!=null){
+                if(getClienteById(cliente.getId_cliente())!=null) {
+                    throw new ApiException("Id existente");
+                }else{
+                    return repository.save(cliente);
+                    //Agregar mensaje de omision del id.
+                }
+            }else{
+                return repository.save(cliente);
             }
-        }finally{
-            manager.close();
+        }catch(Exception e){
+            throw new ApiException(e.getMessage());
         }
-        return clienteAModify;
-        }
-    @Override
-    public Cliente deleteCliente(Integer id) {
-        Cliente retorno = repository.findById(id).orElse(null);
-        repository.deleteById(id);
-        return retorno;
     }
     @Override
-    public String updateNombre(Cliente update){
-        Cliente old = repository.findById(update.getId_cliente()).orElse(null);
-        repository.updateNombre(old.getId_cliente(),update.getNombre());
-        return update.getNombre();
-    };
+    public Cliente putCliente(Cliente cliente) throws ApiException {
+        try{
+            if(getClienteById(cliente.getId_cliente()) != null){
+            return repository.save(cliente);
+        }else{
+            throw new ApiException("Cliente no existente");
+        }}catch(Exception e){
+            throw new ApiException(e.getMessage());
+        }
+    }
+    @Override
+    public Cliente deleteCliente(Integer id) throws ApiException {
+        try{
+            Cliente retorno = repository.findById(id).orElse(null);
+            if(retorno !=null){
+                repository.deleteById(id);
+                return retorno;
+            }else{
+                throw new ApiException("Cliente no existente");
+            }
+        } catch(ApiException e) {
+            throw new ApiException(e.getMessage());
+
+        }
+    }
+    @Override
+    public void deleteAll()throws ApiException{
+        try{
+            repository.deleteAll();
+        }catch (Exception e){
+            throw new ApiException(e.getMessage());
+        }
+    }
 }
