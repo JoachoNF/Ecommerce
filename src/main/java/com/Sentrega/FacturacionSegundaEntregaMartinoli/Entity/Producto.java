@@ -16,9 +16,9 @@ public class Producto {
     @NotNull
     @Column( name = "Id_Producto")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_producto;
+    private Integer id_producto;
     @Column( name = "Nombre_prod")
-    private String nombre_prod;
+    private String nombre;
     @Column( name ="Valor_prod")
     private Double valor_prod;
     @Column( name = "Stock")

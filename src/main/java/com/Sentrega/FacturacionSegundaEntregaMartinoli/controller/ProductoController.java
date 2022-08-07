@@ -1,12 +1,11 @@
 package com.Sentrega.FacturacionSegundaEntregaMartinoli.controller;
 
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Producto;
+import com.Sentrega.FacturacionSegundaEntregaMartinoli.Error.ApiException;
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.service.Producto.ProductoServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -26,11 +25,17 @@ public class ProductoController {
         return productoService.getProductoById(id);
     }
     @GetMapping("/{name}")
-    private Producto getProductoByName(@PathVariable String name){
+    private List<Producto> getProductoByName(@PathVariable String name){
         return productoService.getProductoByNombre(name);
     }
     @GetMapping("/SinStock")
-    private List<Producto> getProductosSinStock(){
+    private List<Producto> getProductosSinStock() throws ApiException {
         return productoService.getProductosSinStock();
+    }
+    @DeleteMapping("/Borrar/{id}")
+    private String deleteProducto(@PathVariable Integer id) throws ApiException{productoService.delete(id);return null;}
+    @PostMapping("/New")
+    private Producto newProducto(@RequestBody Producto p) throws ApiException{
+        return productoService.postProducto(p);
     }
 }
