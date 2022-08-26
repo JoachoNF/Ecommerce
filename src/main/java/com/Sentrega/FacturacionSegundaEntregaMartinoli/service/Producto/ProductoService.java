@@ -6,6 +6,7 @@ import com.Sentrega.FacturacionSegundaEntregaMartinoli.repository.ProductoReposi
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -31,7 +32,7 @@ public class ProductoService implements ProductoServiceInterface {
 
     @Override
     public List<Producto> getProductosSinStock() throws ApiException {
-        List<Producto> retorno = null;
+        List<Producto> retorno = new ArrayList<Producto>();
         try{
             for(Producto p:repository.findAll()){
                 if(p.getStock()==0){
@@ -65,9 +66,36 @@ public class ProductoService implements ProductoServiceInterface {
             throw new ApiException(e.getMessage());
         }
     }
-
     @Override
-    public Void delete(Integer id) {
-        return null;
+    public Producto delete(Integer id) throws ApiException {
+        try{
+            Producto retorno = repository.findById(id).orElse(null);
+            if(retorno !=null){
+                repository.deleteById(id);
+                return retorno;
+            }else{
+                System.out.println("Cliente inexistente");
+                //Agregar una devolución de error
+                if(false)throw new ApiException("E");
+                return retorno;
+            }
+        }catch(ApiException e) {
+            throw new ApiException(e.getMessage());
+
+        }
+    }
+    @Override
+    public List<Producto> borrarSinStock()throws ApiException{
+        List<Producto> retorno = new ArrayList<Producto>();
+        try{
+            List<Producto> aBorrar = getProductosSinStock();
+            for(Producto p:aBorrar){
+                retorno.add(delete(p.getId_producto()));
+            }
+        }catch(Exception e){
+            throw new ApiException(e.getMessage());
+        }finally {
+            return retorno;
+        }
     }
 }

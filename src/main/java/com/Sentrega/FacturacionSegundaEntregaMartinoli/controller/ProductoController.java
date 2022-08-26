@@ -4,6 +4,7 @@ import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Producto;
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.Error.ApiException;
 import com.Sentrega.FacturacionSegundaEntregaMartinoli.service.Producto.ProductoServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,25 +18,37 @@ public class ProductoController {
 
     //Productos
     @GetMapping("")
-    private List<Producto> getProductos(){
-        return productoService.getProductos();
+    private ResponseEntity<?> getProductos(){
+        return ResponseEntity.ok(productoService.getProductos());
     }
     @GetMapping("/{id}")
-    private Producto getProductoById(@PathVariable Integer id){
-        return productoService.getProductoById(id);
+    private ResponseEntity<?> getProductoById(@PathVariable Integer id){
+        return ResponseEntity.ok(productoService.getProductoById(id));
     }
-    @GetMapping("/{name}")
-    private List<Producto> getProductoByName(@PathVariable String name){
-        return productoService.getProductoByNombre(name);
+    @GetMapping("/{nombre}")
+    private ResponseEntity<?> getProductoByName(@PathVariable String nombre){
+        return ResponseEntity.ok(productoService.getProductoByNombre(nombre));
     }
     @GetMapping("/SinStock")
-    private List<Producto> getProductosSinStock() throws ApiException {
-        return productoService.getProductosSinStock();
+    private ResponseEntity<?> getProductosSinStock() throws ApiException {
+        return ResponseEntity.ok(productoService.getProductosSinStock());
     }
     @DeleteMapping("/Borrar/{id}")
-    private String deleteProducto(@PathVariable Integer id) throws ApiException{productoService.delete(id);return null;}
+    private ResponseEntity<?> deleteProducto(@PathVariable Integer id) throws ApiException{
+        Producto retorno = productoService.delete(id);
+        if(retorno!=null){
+            return ResponseEntity.ok(retorno);
+        }else{
+            return ResponseEntity.ok("No se encontro el elemento: "+id);
+        }
+
+    }
+    @DeleteMapping("/BorrarSinStock")
+    private ResponseEntity<?> borrarSinStock()throws ApiException{
+        return ResponseEntity.ok(productoService.borrarSinStock());
+    }
     @PostMapping("/New")
-    private Producto newProducto(@RequestBody Producto p) throws ApiException{
-        return productoService.postProducto(p);
+    private ResponseEntity<?> newProducto(@RequestBody Producto p) throws ApiException{
+        return ResponseEntity.ok(productoService.postProducto(p));
     }
 }

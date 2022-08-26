@@ -15,5 +15,7 @@ public interface ProductoServiceInterface {
     Producto postProducto(Producto p)throws ApiException;
 
     Producto updateProducto(Producto p) throws ApiException;
-    Void delete(Integer id);
+    Producto delete(Integer id) throws ApiException;
+
+    List<Producto> borrarSinStock()throws ApiException;
 }
