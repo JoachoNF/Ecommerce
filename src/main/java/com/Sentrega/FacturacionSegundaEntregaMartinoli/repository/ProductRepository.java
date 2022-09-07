@@ -1,12 +1,12 @@
 package com.Sentrega.FacturacionSegundaEntregaMartinoli.repository;
 
-import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Producto;
+import com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ProductoRepository extends JpaRepository<Producto,Integer> {
-    List<Producto> findByNombre(String nombre);
+public interface ProductRepository extends JpaRepository<Product,Integer> {
+    List<Product> findByName(String name);
 }
