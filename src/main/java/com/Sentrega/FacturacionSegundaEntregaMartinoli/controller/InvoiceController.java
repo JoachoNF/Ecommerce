@@ -20,6 +20,8 @@ public class InvoiceController {
     @GetMapping("/{id}")
     private ResponseEntity<?> getInvoiceById(@PathVariable Integer id){return ResponseEntity.ok(invoiceService.getInvoiceById(id));
     }
+    @GetMapping("/Client{id}")
+    private ResponseEntity<?> getInvoicesByClientId(@PathVariable Integer clientId){return ResponseEntity.ok(invoiceService.getInvoiceByClientId(clientId));}
     @GetMapping("/{date}")
     private ResponseEntity<?> getInvoiceByDate(@PathVariable Date date){return ResponseEntity.ok(invoiceService.getInvoiceByDate(date));
     }

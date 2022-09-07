@@ -25,7 +25,7 @@ public class InvoiceService implements InvoiceServiceInterface {
     }
     @Override
     public List<Invoice> getInvoiceByClientId(Integer clientId) {
-        return null;
+        return repository.findByClientId(clientId);
     }
     @Override
     public List<Invoice> getInvoiceByDate(Date d) {

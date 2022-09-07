@@ -2,7 +2,6 @@ package com.Sentrega.FacturacionSegundaEntregaMartinoli.Entity;
 
 import com.sun.istack.NotNull;
 import lombok.*;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -15,14 +14,14 @@ public class Invoice {
     @Column(name = "InvoiceId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer InvoiceId;
+    @NotNull
     @Column(name = "ClientId")
-    @NotNull
     private Integer clientId;
+    @NotNull
     @Column(name = "ProductId")
-    @NotNull
     private Integer productId;
-    @Column(name = "Date")
     @NotNull
+    @Column(name = "Date")
     private Date date;
     @Column(name = "TotalValue")
     private Double totalValue;
