@@ -33,6 +33,7 @@ public class InvoiceService implements InvoiceServiceInterface {
     }
     @Override
     public Invoice postInvoice(Invoice invoice)throws ApiException{
+        System.out.println("Service");
         try{
             invoice.setDate(Date.from(Instant.now()));
             return repository.save(invoice);

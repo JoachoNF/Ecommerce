@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.Serializable;
+
 @RestController
 @RequestMapping("/Clients")
 public class ClientController {
@@ -32,8 +34,8 @@ public class ClientController {
     private ResponseEntity<?> putClient(@RequestBody Client client) throws ApiException {
         return ResponseEntity.ok(clientService.putClient(client));
     }
-    @DeleteMapping("/Delete")
-    private ResponseEntity<?> deleteClient(@RequestBody Integer id) throws ApiException {
+    @DeleteMapping("/Delete/{id}")
+    private ResponseEntity<?> deleteClient(@PathVariable Integer id) throws ApiException {
         if(id==0){
             ResponseEntity<?> response = ResponseEntity.ok(clientService.getAllClients());
             clientService.deleteAll();

@@ -26,7 +26,9 @@ public class InvoiceController {
     private ResponseEntity<?> getInvoiceByDate(@PathVariable Date date){return ResponseEntity.ok(invoiceService.getInvoiceByDate(date));
     }
     @PostMapping("/Create")
-    private ResponseEntity<?> postInvoice(@RequestBody Invoice invoice) throws ApiException {return ResponseEntity.ok(invoiceService.postInvoice(invoice));
+    private ResponseEntity<?> postInvoice(@RequestBody Invoice invoice) throws ApiException {
+        System.out.println("Controller");
+        return ResponseEntity.ok(invoiceService.postInvoice(invoice));
     }
     @PutMapping("/Update")
     private ResponseEntity<?> updateInvoice(@RequestBody Invoice invoice) throws ApiException {return ResponseEntity.ok(invoiceService.updateInvoice(invoice));
