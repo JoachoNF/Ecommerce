@@ -15,25 +15,32 @@ public class InvoiceController {
     @Autowired
     private InvoiceServiceInterface invoiceService;
     @GetMapping("")
-    private ResponseEntity<?> getAllInvoices(){return ResponseEntity.ok(invoiceService.getAllInvoices());
+    private ResponseEntity<?> getAllInvoices(){
+        return ResponseEntity.ok(invoiceService.getAllInvoices());
     }
     @GetMapping("/{id}")
-    private ResponseEntity<?> getInvoiceById(@PathVariable Integer id){return ResponseEntity.ok(invoiceService.getInvoiceById(id));
+    private ResponseEntity<?> getInvoiceById(@PathVariable Integer id){
+        return ResponseEntity.ok(invoiceService.getInvoiceById(id));
     }
     @GetMapping("/Client{id}")
-    private ResponseEntity<?> getInvoicesByClientId(@PathVariable Integer clientId){return ResponseEntity.ok(invoiceService.getInvoiceByClientId(clientId));}
+    private ResponseEntity<?> getInvoicesByClientId(@PathVariable Integer clientId){
+        return ResponseEntity.ok(invoiceService.getInvoiceByClientId(clientId));}
     @GetMapping("/{date}")
-    private ResponseEntity<?> getInvoiceByDate(@PathVariable Date date){return ResponseEntity.ok(invoiceService.getInvoiceByDate(date));
+    private ResponseEntity<?> getInvoiceByDate(@PathVariable Date date){
+        return ResponseEntity.ok(invoiceService.getInvoiceByDate(date));
     }
     @PostMapping("/Create")
     private ResponseEntity<?> postInvoice(@RequestBody Invoice invoice) throws ApiException {
-        System.out.println("Controller");
+
         return ResponseEntity.ok(invoiceService.postInvoice(invoice));
+
     }
     @PutMapping("/Update")
-    private ResponseEntity<?> updateInvoice(@RequestBody Invoice invoice) throws ApiException {return ResponseEntity.ok(invoiceService.updateInvoice(invoice));
+    private ResponseEntity<?> updateInvoice(@RequestBody Invoice invoice) throws ApiException {
+        return ResponseEntity.ok(invoiceService.updateInvoice(invoice));
     }
     @DeleteMapping("/Delete/{id}")
-    private ResponseEntity<?> deleteInvoice(@PathVariable Integer id) throws ApiException {return ResponseEntity.ok(invoiceService.delete(id));
+    private ResponseEntity<?> deleteInvoice(@PathVariable Integer id) throws ApiException {
+        return ResponseEntity.ok(invoiceService.delete(id));
     }
 }
